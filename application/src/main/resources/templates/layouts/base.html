@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:fragment="base"
+>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>[[${title}]]</title>
+</head>
+<body>
+<header th:replace="components/navbar/navbar :: navbar"></header>
+<section class="page-content">
+    <section class="search-and-user">
+        <form class="relative">
+            <i class="absolute fa fa-search top-6 left-8 transform -translate-y-1/2 -translate-x-1/2"></i>
+            <input class="pl-16" placeholder="Search Pages..." type="search">
+            <button aria-label="submit form" type="submit"></button>
+        </form>
+        <div class="profile cursor-pointer">
+            <span class="greeting mr-6 flex flex-col justify-center">
+                Marko Vuckovic
+                <small style="color: var(--light-steel-blue);">Administrator</small>
+            </span>
+            <div class="notifications">
+                <span class="badge">1</span>
+                <img class="w-12 h-12 rounded-full object-cover"
+                     src="https://www.whatsappprofiledpimages.com/wp-content/uploads/2021/08/Profile-Photo-Wallpaper.jpg">
+            </div>
+        </div>
+    </section>
+    <section class="grid" th:replace="this :: content"></section>
+    <footer class="page-footer"></footer>
+</section>
+<script src="/js/main.js"></script>
+</body>
+</html>
