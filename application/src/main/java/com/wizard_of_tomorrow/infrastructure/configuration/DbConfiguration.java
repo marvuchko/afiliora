@@ -1,4 +1,4 @@
-package com.wizard_of_tomorrow.configuration;
+package com.wizard_of_tomorrow.infrastructure.configuration;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

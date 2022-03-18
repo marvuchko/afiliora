@@ -6,12 +6,12 @@
 
     <parent>
         <groupId>com.wizard_of_tomorrow</groupId>
-        <artifactId>affiliora</artifactId>
+        <artifactId>afiliora</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>application</artifactId>
-    <version>${parent.version}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
 
     <dependencies>
@@ -42,7 +42,6 @@
     </dependencies>
 
     <build>
-
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -57,7 +56,6 @@
                 </configuration>
             </plugin>
         </plugins>
-
     </build>
 
 </project>

@@ -8,13 +8,11 @@
         <groupId>com.wizard_of_tomorrow</groupId>
         <artifactId>afiliora</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/>
     </parent>
 
     <artifactId>infrastructure</artifactId>
-    <version>${parent.version}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
-    <description>Web application for affiliate marketing</description>
 
     <dependencies>
         <dependency>
