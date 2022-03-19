@@ -12,18 +12,18 @@ services:
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=${DB_NAME:-afiliora}
-      - POSTGRES_USER=${DB_USERNAME:-afiliora}
-      - POSTGRES_DB=${DB_PASSWORD:-afiliora_db}
+      - POSTGRES_PASSWORD=${DB_NAME:-affiliora}
+      - POSTGRES_USER=${DB_USERNAME:-affiliora}
+      - POSTGRES_DB=${DB_PASSWORD:-affiliora_db}
     restart: unless-stopped
     networks:
-      - afiliora-backend
+      - affiliora-backend
 
-  afiliora-server:
-    container_name: afiliora-application-container
+  affiliora-server:
+    container_name: affiliora-application-container
     build:
       context: .
-    image: afiliora-application:${APPLICATION_VERSION:-1.0}
+    image: affiliora-application:${APPLICATION_VERSION:-1.0}
     expose:
       - 8081
     ports:
@@ -31,19 +31,19 @@ services:
     environment:
       - DB_URL=${DB_URL:-postgres-db}
       - DB_PORT=${DB_PORT:-5432}
-      - DB_NAME=${DB_NAME:-afiliora_db}
-      - DB_USERNAME=${DB_USERNAME:-afiliora}
-      - DB_PASSWORD=${DB_PASSWORD:-afiliora}
+      - DB_NAME=${DB_NAME:-affiliora_db}
+      - DB_USERNAME=${DB_USERNAME:-affiliora}
+      - DB_PASSWORD=${DB_PASSWORD:-affiliora}
     depends_on:
       - postgres-db
     links:
       - postgres-db
     networks:
-      - afiliora-backend
+      - affiliora-backend
 
 volumes:
   postgres-db-volume:
 
 networks:
-  afiliora-backend:
+  affiliora-backend:
     driver: bridge
