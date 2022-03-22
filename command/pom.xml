@@ -17,7 +17,7 @@
     <dependencies>
         <dependency>
             <groupId>com.wizard_of_tomorrow</groupId>
-            <artifactId>infrastructure</artifactId>
+            <artifactId>data</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

@@ -10,15 +10,24 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>query</artifactId>
+    <artifactId>data</artifactId>
     <version>${parent.version}</version>
     <name>${project.artifactId}</name>
 
     <dependencies>
         <dependency>
             <groupId>com.wizard_of_tomorrow</groupId>
-            <artifactId>data</artifactId>
+            <artifactId>commons</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
         </dependency>
     </dependencies>
 

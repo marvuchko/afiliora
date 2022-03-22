@@ -32,8 +32,10 @@ services:
       - DB_URL=${DB_URL:-postgres-db}
       - DB_PORT=${DB_PORT:-5432}
       - DB_NAME=${DB_NAME:-affiliora_db}
+      - DB_SCHEMA=${DB_SCHEMA:-public}
       - DB_USERNAME=${DB_USERNAME:-affiliora}
       - DB_PASSWORD=${DB_PASSWORD:-affiliora}
+      - DEVTOOLS_ENABLED=${DEVTOOLS_ENABLED:-false}
     depends_on:
       - postgres-db
     links:
