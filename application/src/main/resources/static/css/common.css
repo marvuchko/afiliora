@@ -1,35 +1,4 @@
-/* RESET RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"); */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
-
-:root {
-  --page-header-bgColor: #1B1B1E;
-  --page-header-bgColor-hover: #373F51;
-  --page-header-txtColor: #A9BCD0;
-  --page-header-headingColor: #7889a4;
-  --page-header-width: 220px;
-  --page-content-bgColor: #D8DBE2;
-  --page-content-txtColor: #373F51;
-  --page-content-blockColor: #F1F2F4;
-  --white: #EEE5E9;
-  --black: #000;
-  --light-steel-blue: #6D8CAE;
-  --blue: #58A4B0;
-  --red: #ec1848;
-  --border-radius: 4px;
-  --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
-  --switch-bgLightModeColor: #A9BCD0;
-  --switch-sunColor: D1CCA9;
-  --switch-moonColor: #E2E2D9;
-  --switch-bgDarkModeColor: #373F51;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import url('/css/base.css');
 
 ul {
   list-style: none;
@@ -65,10 +34,6 @@ label {
 button,
 input {
   border: none;
-}
-
-body {
-  font: 16px/1.5 "Poppins", sans-serif;
 }
 
 
@@ -121,7 +86,6 @@ body {
 }
 
 .page-header .logo {
-  max-width: 120px;
   fill: var(--white);
 }
 

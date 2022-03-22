@@ -3,10 +3,8 @@
 <body>
     <header class="page-header" th:fragment="navbar">
         <nav>
-            <a aria-label="forecastr logo" class="logo" href="#0">
-                <svg height="49" width="140">
-                    <use xlink:href="#logo"></use>
-                </svg>
+            <a aria-label="forecastr logo" class="logo" href="/access/login">
+                <img id="logo-image" class="mx-auto" src="/images/logo/affiliora-light.png">
             </a>
             <button aria-expanded="false" aria-label="open menu" class="toggle-mob-menu">
                 <svg aria-hidden="true" height="20" width="20">
@@ -15,7 +13,7 @@
             </button>
             <ul class="admin-menu">
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Options')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Dashboard', icon='area-chart', href='/')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Dashboard', icon='area-chart', href='/dashboard')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Pages', icon='file-text-o')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Affiliates', icon='male')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Trends', icon='line-chart')"></li>
@@ -26,7 +24,7 @@
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Profile', icon='user', href='/profile')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Settings', icon='cogs', href='/settings')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Billing', icon='usd', href='/billing')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Support', icon='question-circle', href='/support')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Logout', icon='sign-out', href='/access/login')"></li>
                 <li>
                     <div class="switch">
                         <input checked id="mode" type="checkbox">

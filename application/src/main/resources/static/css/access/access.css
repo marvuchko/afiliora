@@ -1,0 +1,9 @@
+@import url('/css/base.css');
+@import url('/css/components/footer.css');
+
+.content {
+    background: var(--page-header-bgColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

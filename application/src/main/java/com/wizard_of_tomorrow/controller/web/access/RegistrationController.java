@@ -1,4 +1,4 @@
-package com.wizard_of_tomorrow.controller.web.affiliate;
+package com.wizard_of_tomorrow.controller.web.access;
 
 import com.wizard_of_tomorrow.controller.AbstractViewController;
 import org.springframework.stereotype.Controller;
@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(DashboardController.BASE_URL)
-public class DashboardController extends AbstractViewController {
+@RequestMapping(RegistrationController.BASE_URL)
+public class RegistrationController extends AbstractViewController {
 
-    public static final String BASE_URL = "/dashboard";
+    public static final String BASE_URL = "/access/register";
 
-    public DashboardController() {
-        super("pages/dashboard/dashboard");
+    public RegistrationController() {
+        super("pages/register/register");
     }
 
     @Override

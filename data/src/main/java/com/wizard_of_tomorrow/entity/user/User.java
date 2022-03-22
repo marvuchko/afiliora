@@ -22,8 +22,6 @@ public class User extends BaseEntity<UUID> {
 
     String lastName;
 
-    String username;
-
     String password;
 
     String email;

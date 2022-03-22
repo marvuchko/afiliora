@@ -1,4 +1,4 @@
-package com.wizard_of_tomorrow.controller.web.login;
+package com.wizard_of_tomorrow.controller.web.access;
 
 import com.wizard_of_tomorrow.controller.AbstractViewController;
 import org.springframework.stereotype.Controller;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(LoginController.BASE_URL)
 public class LoginController extends AbstractViewController {
 
-    public static final String BASE_URL = "/login";
+    public static final String BASE_URL = "/access/login";
 
     public LoginController() {
         super("pages/login/login");

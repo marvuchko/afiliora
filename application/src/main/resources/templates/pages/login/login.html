@@ -1,28 +1,54 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Affiliora | Login</title>
-    <link rel="stylesheet" href="/css/login/login.css" />
-</head>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:include="layouts/access :: access(title='Affiliora | Login')"
+>
 <body>
-<div class="content">
-    <div class="flex-div">
-        <div class="name-content">
-            <h1 class="logo">Affiiora</h1>
-            <p>Explore the market of affiliate offers.</p>
+<form th:fragment="content" class="content w-screen h-screen">
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+        <div class="mb-4">
+            <img id="logo-image" class="mx-auto" src="/images/logo/affiliora-dark.png">
         </div>
-        <form>
-            <input type="text" placeholder="Email" required />
-            <input type="password" placeholder="Password" required>
-            <button class="login">Log In</button>
-            <a href="#">Forgot Password ?</a>
-            <hr>
-            <button class="create-account">Create New Account</button>
-        </form>
+        <h1 class="mb-4 pt-2 text-center text-primary">
+            Welcome back 👋
+        </h1>
+        <hr class="mb-1">
+        <hr class="mb-4">
+        <div class="mb-4">
+            <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
+                <span class="mr-2">✉</span>️ Email
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email"
+                   placeholder="Enter your email..." type="email">
+        </div>
+        <div class="mb-6">
+            <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                <span class="mr-2">🔒</span> Password
+            </label>
+            <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
+                   id="password" placeholder="******************" type="password">
+            <p class="text-red text-xs italic"><sup class="mr-1">Tip: </sup> Never tell anyone your password.</p>
+        </div>
+        <hr class="mb-4">
+        <div class="flex items-center justify-between mb-4">
+            <button class="font-bold py-2 px-4 rounded bg-link text-secondary"
+                    type="button"
+                    onclick="window.location.href='/dashboard'">
+                <i class="fa fa-sign-in"></i>
+                Log in
+            </button>
+            <a class="inline-block align-baseline font-bold text-sm text-link" href="#">
+                Forgot Password?
+            </a>
+        </div>
+        <hr class="mb-1">
+        <hr class="mb-4">
+        <div class="flex items-center justify-center">
+            <a class="inline-block align-baseline font-bold text-sm text-link" href="/access/register">
+                <i class="fa fa-plus"></i>
+                Create new account
+            </a>
+        </div>
     </div>
-</div>
+</form>
 </body>
 </html>

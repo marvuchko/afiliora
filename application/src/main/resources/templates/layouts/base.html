@@ -4,10 +4,10 @@
 >
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/common.css">
     <title>[[${title}]]</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" async></script>
 </head>
 <body>
 <header th:replace="components/navbar/navbar :: navbar"></header>
@@ -33,6 +33,7 @@
     <section class="grid" th:replace="this :: content"></section>
     <footer class="page-footer"></footer>
 </section>
-<script src="/js/main.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/dashboard/total-leads-bar-chart.js"></script>
 </body>
 </html>

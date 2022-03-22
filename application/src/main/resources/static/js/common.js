@@ -1,5 +1,6 @@
 const html = document.documentElement;
 const body = document.body;
+const logo = document.querySelector("#logo-image");
 const menuLinks = document.querySelectorAll(".admin-menu a");
 const collapseBtn = document.querySelector(".admin-menu .collapse-btn");
 const toggleMobileMenu = document.querySelector(".toggle-mob-menu");
@@ -60,10 +61,12 @@ switchInput.addEventListener("input", function () {
 
   if (html.classList.contains(lightModeClass)) {
     switchLabelText.textContent = "Light Mode";
+    logo.src = "/images/logo/affiliora-dark.png";
     localStorage.setItem("dark-mode", "false");
     return;
   }
 
   switchLabelText.textContent = "Dark Mode";
+  logo.src = "/images/logo/affiliora-light.png";
   localStorage.setItem("dark-mode", "true");
 });

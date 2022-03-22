@@ -25,11 +25,10 @@
             </column>
             <column name="first_name" type="varchar(150)"/>
             <column name="last_name" type="varchar(150)"/>
-            <column name="email" type="varchar(150)"/>
             <column name="image_url" type="text"/>
             <column name="additional_data" type="text"/>
-            <column name="username" type="varchar(50)"/>
-            <column name="password" type="varchar(50)"/>
+            <column name="email" type="varchar(120)"/>
+            <column name="password" type="varchar(120)"/>
             <column name="role_id" type="uuid" />
          </createTable>
 

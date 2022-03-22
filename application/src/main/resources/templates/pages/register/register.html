@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:include="layouts/access :: access(title='Affiliora | Register')"
+>
+<body>
+<form th:fragment="content" class="content w-screen h-screen">
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+        <div class="mb-4">
+            <img id="logo-image" class="mx-auto" src="/images/logo/affiliora-dark.png">
+        </div>
+        <h1 class="mb-4 pt-2 text-center text-primary">
+            Don't have an account, <br>
+            create one here...
+        </h1>
+        <hr class="mb-1">
+        <hr class="mb-4">
+        <div class="mb-4 flex">
+            <div class="w-48 mr-2">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
+                    <span class="mr-2">✉️</span> Email
+                </label>
+                <input class="w-full shadow appearance-none border rounded py-2 px-3 text-grey-darker" id="email"
+                       placeholder="someone@mail.com" type="email">
+            </div>
+            <div class="w-48">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                    <span class="mr-2">🔒</span> Password
+                </label>
+                <input class="w-full shadow appearance-none border rounded py-2 px-3 text-grey-darker" id="password"
+                       placeholder="**********." type="text">
+            </div>
+        </div>
+        <div class="mb-4 flex">
+            <div class="w-48 mr-2">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="firstName">
+                    <span class="mr-2">👤</span> First Name
+                </label>
+                <input class="w-full shadow appearance-none border rounded py-2 px-3 text-grey-darker" id="firstName"
+                       placeholder="John" type="text">
+            </div>
+            <div class="w-48">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="lastName">
+                    <span class="mr-2">👤</span> Last Name
+                </label>
+                <input class="w-full shadow appearance-none border rounded py-2 px-3 text-grey-darker" id="lastName"
+                       placeholder="Doe" type="text">
+            </div>
+        </div>
+        <p class="text-red text-xs italic mb-4"><sup class="mr-1">Tip:</sup>Our employee will never ask for your password.</p>
+        <hr class="mb-4">
+        <div class="flex items-center justify-between mb-4">
+            <button class="font-bold py-2 px-4 rounded bg-link text-secondary"
+                    type="button"
+                    onclick="window.location.href='/dashboard'">
+                <i class="fa fa-user-plus"></i>
+                Register
+            </button>
+            <a class="inline-block align-baseline font-bold text-sm text-link" href="#">
+                Forgot Password?
+            </a>
+        </div>
+        <hr class="mb-1">
+        <hr class="mb-4">
+        <div class="flex items-center justify-center">
+            <a class="inline-block align-baseline font-bold text-sm text-link" href="/access/login">
+                <i class="fa fa-sign-in"></i>
+                Log in
+            </a>
+        </div>
+    </div>
+</form>
+</body>
+</html>

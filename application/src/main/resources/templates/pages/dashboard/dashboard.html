@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      th:include="layouts/base :: base(title='Dashboard')">
+      th:include="layouts/base :: base(title='Affiliora | Dashboard')">
 <body>
 <section class="grid" th:fragment="content">
     <article></article>
-    <article></article>
+    <article th:replace="components/bar-chart/bar-chart :: bar-chart(chartId='total-leads-bar-chart', chartTitle='Total leads by year')" class="flex justify-evenly"></article>
     <article></article>
     <article></article>
     <article></article>
