@@ -11,6 +11,7 @@ services:
       - ${DB_PORT:-5432}:5432
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       - POSTGRES_PASSWORD=${DB_NAME:-affiliora}
       - POSTGRES_USER=${DB_USERNAME:-affiliora}
@@ -32,7 +33,7 @@ services:
       - DB_URL=${DB_URL:-postgres-db}
       - DB_PORT=${DB_PORT:-5432}
       - DB_NAME=${DB_NAME:-affiliora_db}
-      - DB_SCHEMA=${DB_SCHEMA:-public}
+      - DB_SCHEMA=${DB_SCHEMA:-core}
       - DB_USERNAME=${DB_USERNAME:-affiliora}
       - DB_PASSWORD=${DB_PASSWORD:-affiliora}
       - DEVTOOLS_ENABLED=${DEVTOOLS_ENABLED:-false}
