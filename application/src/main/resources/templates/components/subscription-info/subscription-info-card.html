@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="subscription-info-card" class="w-72 h-full p-4 rounded flex flex-col items-center justify-between">
+    <div class="w-full">
+        <p class="font-bold text-3xl">[[${cardTitle}]]:</p>
+    </div>
+    <p class="w-full flex justify-between text-lg">
+        <span>Used: <i class="text-link">110</i></span>
+        <span class="text-success"> 15% <b>↗</b></span>
+    </p>
+    <p class="w-full flex justify-between text-lg">
+        <span>Available: <i class="text-link">290</i></span>
+        <span class="text-danger"> 50% <b>↘</b></span>
+    </p>
+    <p class="w-full flex justify-between text-lg">
+        <span>Remaining: <i class="text-link">200</i></span>
+        <span class="text-danger"> 50% <b>↘</b></span>
+    </p>
+</div>
+</body>
+</html>

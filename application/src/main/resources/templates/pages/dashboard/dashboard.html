@@ -3,18 +3,20 @@
       th:include="layouts/base :: base(title='Affiliora | Dashboard')">
 <body>
 <section class="grid" th:fragment="content">
-    <article></article>
+    <article th:replace="components/subscription-info/subscription-info :: subscription-info"></article>
     <article th:replace="components/chart/chart :: chart(chartId='total-leads-bar-chart', chartTitle='Total leads by year', chartSubtitle='Statistics')"
             class="flex justify-evenly">
     </article>
     <article th:replace="components/chart/chart :: chart(chartId='total-sales-bar-chart', chartTitle='Total conversions by year', chartSubtitle='Statistics')"
              class="flex justify-evenly">
     </article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
+    <article th:replace="components/chart/chart :: chart(chartId='affiliate-pie-chart', chartTitle='Total affiliates by month', chartSubtitle='Statistics')"
+             class="flex justify-evenly">
+    </article>
+    <article th:replace="components/chart/chart :: chart(chartId='clicks-polar-chart', chartTitle='Total clicks by month', chartSubtitle='Statistics')"
+             class="flex justify-evenly">
+    </article>
+    <article th:replace="components/spending-info/spending-info :: spending-info"></article>
 </section>
 </body>
 </html>

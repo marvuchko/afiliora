@@ -38,6 +38,14 @@ body {
     color: var(--page-content-txtColor);
 }
 
+.text-success {
+    color: var(--light-steel-blue);
+}
+
+.text-danger {
+    color: var(--red);
+}
+
 .text-secondary {
     color: var(--white);
 }
@@ -52,4 +60,16 @@ body {
 
 .bg-link {
     background: var(--blue);
+}
+
+.bg-dark {
+    background: var(--page-header-bgColor);
+}
+
+.bg-disabled {
+    background: var(--page-header-txtColor);
+}
+
+.border-disabled {
+    border-color: var(--page-header-txtColor);
 }

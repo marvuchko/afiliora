@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="spending-info-card" class="w-48 h-full p-4 rounded flex flex-col items-center justify-between">
+    <p class="font-bold text-2xl">[[${cardTitle}]]:</p>
+    <span class="text-5xl text-success">
+        <i th:if="${icon != null}" th:class="${icon != null ? 'fa fa-' + icon : ''}"></i>
+    </span>
+    <span class="text-2xl text-link">$123</span>
+</div>
+</body>
+</html>
