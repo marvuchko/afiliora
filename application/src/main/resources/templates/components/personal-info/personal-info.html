@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<article th:fragment="personal-info" class="p-6 w-full h-full flex flex-col">
+    <h6 class="uppercase text-blueGray-400 mb-3 text-xs font-semibold">
+        Personal Info:
+    </h6>
+    <hr class="w-full">
+    <div class="pt-4 personal-info-grid w-full h-full">
+        <div class="flex items-center justify-center">
+            <img class="w-48 h-48 object-cover shadow" src="https://www.whatsappprofiledpimages.com/wp-content/uploads/2021/08/Profile-Photo-Wallpaper.jpg">
+        </div>
+        <div class="h-full border border-2"></div>
+        <div class="grid grid-cols-3 gap-2 py-1 px-6">
+                <span class="font-bold flex justify-between">
+                    <span class="uppercase"><b class="mr-1">👤</b> First name:</span>
+                    <span class="font-normal text-link">Marko</span>
+                </span>
+            <span class="font-bold flex justify-between">
+                    <span class="uppercase"><b class="mr-1">👤</b> Last name:</span>
+                    <span class="font-normal text-link">Vuckovic</span>
+                </span>
+            <span class="font-bold flex justify-between">
+                    <span class="uppercase"><b class="mr-1">✉️</b> Email:</span>
+                    <span class="font-normal text-link">marko@mail.com</span>
+                </span>
+            <span class="font-bold flex justify-between">
+                    <span class="uppercase"><b class="mr-1">📞️</b> Phone:</span>
+                    <span class="font-normal text-link">+381611412560</span>
+                </span>
+            <span class="font-bold flex justify-between">
+                    <span class="uppercase"><b class="mr-1">📅️</b> Birthday:</span>
+                    <span class="font-normal text-link">28. 03. 1995.</span>
+                </span>
+            <span class="font-bold flex justify-between">
+                    <span class="uppercase"><b class="mr-1">📍</b> Address:</span>
+                    <span class="font-normal text-link">Bulevar Nemanjica</span>
+                </span>
+            <div class="col-span-full grid grid-cols-2 gap-2">
+                <button class="bg-link text-secondary p-2 shadow">
+                    <i class="fa fa-lock mr-2"></i>
+                    Change password
+                </button>
+                <button class="bg-link text-secondary p-2 shadow">
+                    <i class="fa fa-edit mr-2"></i>
+                    Edit personal info
+                </button>
+            </div>
+        </div>
+        <div class="h-full border border-2"></div>
+        <span></span>
+    </div>
+
+</article>
+</body>
+</html>
