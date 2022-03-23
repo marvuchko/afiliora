@@ -42,6 +42,10 @@ body {
     color: var(--white);
 }
 
+.text-disabled {
+    color: var(--page-header-txtColor);
+}
+
 .text-link {
     color: var(--blue);
 }

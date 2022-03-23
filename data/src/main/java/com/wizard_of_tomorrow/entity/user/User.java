@@ -31,7 +31,7 @@ public class User extends BaseEntity<UUID> {
     @Convert(converter = AdditionalDataConverter.class)
     Map<String, Object> additionalData;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id")
     UserRole role;
 

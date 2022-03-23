@@ -12,4 +12,8 @@ public abstract class AbstractViewController {
 
     final String view;
 
+    protected String redirectTo(String url) {
+        return "redirect:%s".formatted(url);
+    }
+
 }

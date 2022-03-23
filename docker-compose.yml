@@ -37,6 +37,8 @@ services:
       - DB_USERNAME=${DB_USERNAME:-affiliora}
       - DB_PASSWORD=${DB_PASSWORD:-affiliora}
       - DEVTOOLS_ENABLED=${DEVTOOLS_ENABLED:-false}
+      - AFFILIORA_MVC_ENABLED=${AFFILIORA_MVC_ENABLED:-true}
+      - AFFILIORA_MVC_CACHE_MAX_MINUTES=${AFFILIORA_MVC_CACHE_MAX_MINUTES:-1440}
     depends_on:
       - postgres-db
     links:

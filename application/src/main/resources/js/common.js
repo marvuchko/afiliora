@@ -10,7 +10,7 @@ const switchLabelText = switchLabel.querySelector("span:last-child");
 const collapsedClass = "collapsed";
 const lightModeClass = "light-mode";
 
-/*TOGGLE HEADER STATE*/
+// TOGGLE HEADER STATE
 collapseBtn.addEventListener("click", function() {
     body.classList.toggle(collapsedClass);
     this.getAttribute("aria-expanded") == "true" ?
@@ -21,7 +21,7 @@ collapseBtn.addEventListener("click", function() {
         this.setAttribute("aria-label", "collapse menu");
 });
 
-/*TOGGLE MOBILE MENU*/
+// TOGGLE MOBILE MENU
 toggleMobileMenu.addEventListener("click", function() {
     body.classList.toggle("mob-menu-opened");
     this.getAttribute("aria-expanded") == "true" ?
@@ -32,7 +32,7 @@ toggleMobileMenu.addEventListener("click", function() {
         this.setAttribute("aria-label", "open menu");
 });
 
-/*SHOW TOOLTIP ON MENU LINK HOVER*/
+// SHOW TOOLTIP ON MENU LINK HOVER
 for (const link of menuLinks) {
     link.addEventListener("mouseenter", function() {
         if (
@@ -47,12 +47,13 @@ for (const link of menuLinks) {
     });
 }
 
-/*TOGGLE LIGHT/DARK MODE*/
+// TOGGLE LIGHT/DARK MODE
 const darkMode = localStorage.getItem("dark-mode");
 
 if (darkMode === "false") {
     html.classList.add(lightModeClass);
     switchInput.checked = false;
+    logo.src = "/images/logo/affiliora-dark.png";
     switchLabelText.textContent = "Light Mode";
 }
 

@@ -1,4 +1,4 @@
-config = {
+const totalLeadsConfig = {
     type: "bar",
     data: {
         labels: [
@@ -12,8 +12,8 @@ config = {
         ],
         datasets: [{
                 label: new Date().getFullYear(),
-                backgroundColor: "#ed64a6",
-                borderColor: "#ed64a6",
+                backgroundColor: "lime",
+                borderColor: "lime",
                 data: [30, 78, 56, 34, 100, 45, 13],
                 fill: false,
                 barThickness: 8,
@@ -21,8 +21,8 @@ config = {
             {
                 label: new Date().getFullYear() - 1,
                 fill: false,
-                backgroundColor: "#4c51bf",
-                borderColor: "#4c51bf",
+                backgroundColor: "navy",
+                borderColor: "navy",
                 data: [27, 68, 86, 74, 10, 4, 87],
                 barThickness: 8,
             },
@@ -45,9 +45,9 @@ config = {
         },
         legend: {
             labels: {
-                fontColor: "rgba(0,0,0,.4)",
+                fontColor: "black",
             },
-            align: "end",
+            align: "start",
             position: "bottom",
         },
         scales: {
@@ -86,5 +86,5 @@ config = {
     },
 };
 
-ctx = document.getElementById("total-leads-bar-chart").getContext("2d");
-window.myBar = new Chart(ctx, config);
+const totalLeadsCtx = document.getElementById("total-leads-bar-chart").getContext("2d");
+window.totalLeadsChart = new Chart(totalLeadsCtx, totalLeadsConfig);

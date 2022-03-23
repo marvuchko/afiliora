@@ -12,18 +12,18 @@
                 </svg>
             </button>
             <ul class="admin-menu">
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Options')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Explore')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Marketplace', icon='shopping-cart')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Trends', icon='compass')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Affiliate')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Dashboard', icon='area-chart', href='/dashboard')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Pages', icon='file-text-o')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Affiliates', icon='male')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Trends', icon='line-chart')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Collection', icon='object-group')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Comments', icon='comment-o')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Appearance', icon='eye')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='My Affiliates', icon='male')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='My Links', icon='link')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Discussion', icon='comment-o')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Account')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Profile', icon='user', href='/profile')"></li>
+                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Notifications', icon='bell', href='/profile')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Settings', icon='cogs', href='/settings')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Billing', icon='usd', href='/billing')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Logout', icon='sign-out', href='/access/login')"></li>
                 <li>
                     <div class="switch">

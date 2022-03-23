@@ -28,3 +28,8 @@ spring:
     spring:
       devtools:
         add-properties: ${DEVTOOLS_ENABLED:false}
+
+affiliora:
+  mvc:
+    enabled: ${AFFILIORA_MVC_ENABLED:true}
+    cache-max-minutes: ${AFFILIORA_MVC_CACHE_MAX_MINUTES:1}
