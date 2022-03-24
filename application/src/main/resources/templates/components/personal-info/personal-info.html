@@ -7,11 +7,15 @@
     </h6>
     <hr class="w-full">
     <div class="pt-4 personal-info-grid w-full h-full">
-        <div class="flex items-center justify-center">
-            <img class="w-48 h-48 object-cover shadow" src="https://www.whatsappprofiledpimages.com/wp-content/uploads/2021/08/Profile-Photo-Wallpaper.jpg">
+        <div class="flex h-52 relative">
+            <img class="flex-1 object-cover shadow" src="https://www.whatsappprofiledpimages.com/wp-content/uploads/2021/08/Profile-Photo-Wallpaper.jpg">
+            <div class="w-full text-center bg-dark absolute bottom-0 left-0 p-2 text-secondary opacity-70 cursor-pointer hover:opacity-100">
+                <i class="fa fa-picture-o mr-2"></i>
+                Change Photo
+            </div>
         </div>
         <div class="h-full border border-2"></div>
-        <div class="grid grid-cols-3 gap-2 py-1 px-6">
+        <div class="grid grid-cols-2 gap-2 py-1 px-6">
                 <span class="font-bold flex justify-between">
                     <span class="uppercase"><b class="mr-1">👤</b> First name:</span>
                     <span class="font-normal text-link">Marko</span>
@@ -37,20 +41,44 @@
                     <span class="font-normal text-link">Bulevar Nemanjica</span>
                 </span>
             <div class="col-span-full grid grid-cols-2 gap-2">
-                <button class="bg-link text-secondary p-2 shadow">
+                <button class="bg-link text-secondary p-2 shadow opacity-90 hover:opacity-100">
                     <i class="fa fa-lock mr-2"></i>
                     Change password
                 </button>
-                <button class="bg-link text-secondary p-2 shadow">
+                <button class="bg-link text-secondary p-2 shadow opacity-90 hover:opacity-100">
                     <i class="fa fa-edit mr-2"></i>
                     Edit personal info
                 </button>
             </div>
         </div>
         <div class="h-full border border-2"></div>
-        <span></span>
+        <div class="flex flex-col justify-between py-1 px-6">
+            <div>
+                <h6 class="uppercase text-blueGray-400 mb-3 text-xs font-semibold">
+                    Social media Info:
+                </h6>
+                <hr>
+            </div>
+            <form class="flex-1 grid grid-cols-2 py-6">
+                <span class="flex justify-between items-center">
+                    <i class="fa fa-facebook text-2xl text-success"></i>
+                    <input type="text" class="w-5/6 rounded-2xl border border-2 px-4 py-2 text-success shadow cursor-pointer bg-transparent" placeholder="Facebook profile link...">
+                </span>
+                <span class="flex justify-between items-center">
+                    <i class="fa fa-instagram text-2xl text-success"></i>
+                    <input type="text" class="w-5/6 rounded-2xl border border-2 px-4 py-2 text-success shadow cursor-pointer bg-transparent" placeholder="Instagram profile link...">
+                </span>
+                <span class="flex justify-between items-center">
+                    <i class="fa fa-twitter text-2xl text-success"></i>
+                    <input type="text" class="w-5/6 rounded-2xl border border-2 px-4 py-2 text-success shadow cursor-pointer bg-transparent" placeholder="Twitter profile link...">
+                </span>
+                <span class="flex justify-between items-center">
+                    <i class="fa fa-linkedin text-2xl text-success"></i>
+                    <input type="text" class="w-5/6 rounded-2xl border border-2 px-4 py-2 text-success shadow cursor-pointer bg-transparent" placeholder="LinkedIn profile link...">
+                </span>
+            </form>
+        </div>
     </div>
-
 </article>
 </body>
 </html>

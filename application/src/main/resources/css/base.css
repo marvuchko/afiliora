@@ -58,6 +58,18 @@ body {
     color: var(--blue);
 }
 
+.text-blue {
+    color: var(--light-steel-blue);
+}
+
+.text-lime {
+    color: lime;
+}
+
+.text-navy {
+    color: navy;
+}
+
 .bg-link {
     background: var(--blue);
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<article th:fragment="personal-activity" class="p-6 w-full h-full flex flex-col">
+    <h6 class="uppercase text-blueGray-400 mb-3 text-xs font-semibold">
+        Recent Activity:
+    </h6>
+    <hr class="w-full mb-4">
+    <div class="border border-2 flex-1 shadow overflow-y-scroll">
+        <a class="personal-activity-grid py-4 px-6 cursor-pointer">
+            <span class="flex items-center justify-center text-3xl">💬</span>
+            <span class="flex items-center justify-center text-ellipsis overflow-hidden"><span>You send <b>Sara Smith</b> affiliate offer</span></span>
+            <span class="flex items-center justify-center text-success">24.03.2022. 12:00</span>
+            <span class="flex items-center justify-center text-link">View <i class="fa fa-arrow-circle-right ml-2"></i></span>
+        </a>
+        <a class="personal-activity-grid py-4 px-6 cursor-pointer">
+            <span class="flex items-center justify-center text-3xl">✉️</span>
+            <span class="flex items-center justify-center text-ellipsis overflow-hidden"><span>The affiliate offer <b>Test</b> was removed by <b>Nick Mark</b></span></span>
+            <span class="flex items-center justify-center text-success">24.03.2022. 12:00</span>
+            <span class="flex items-center justify-center text-link">View <i class="fa fa-arrow-circle-right ml-2"></i></span>
+        </a>
+        <a class="personal-activity-grid py-4 px-6 cursor-pointer">
+            <span class="flex items-center justify-center text-3xl">🤝🏻</span>
+            <span class="flex items-center justify-center text-ellipsis overflow-hidden"><span><b>Patrick Sullivan</b> accepted affiliate offer.</span></span>
+            <span class="flex items-center justify-center text-success">24.03.2022. 12:00</span>
+            <span class="flex items-center justify-center text-link">View <i class="fa fa-arrow-circle-right ml-2"></i></span>
+        </a>
+    </div>
+</article>
+</body>
+</html>

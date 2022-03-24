@@ -2,3 +2,21 @@
     display: grid;
     grid-template-columns: 1fr 2px 3fr 2px 3fr;
 }
+
+.personal-activity-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+    grid-column-gap: 3rem;
+    border-bottom: 2px solid rgba(229, 231, 235, var(--tw-border-opacity));
+    border-right: 2px solid rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+.personal-region-language-icon {
+    font-size: 12rem;
+}
+
+.personal-plan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2px 1fr 1fr;
+    grid-column-gap: 3rem;
+}

@@ -4,9 +4,9 @@
 <body>
 <section class="grid" th:fragment="content">
   <article th:replace="components/personal-info/personal-info :: personal-info"></article>
-  <article>My Profile</article>
-  <article>My Profile</article>
-  <article>My Profile</article>
+  <article th:replace="components/personal-region-language-info/personal-region-language-info :: personal-region-language-info"></article>
+  <article th:replace="components/personal-activity/personal-activity :: personal-activity"></article>
+  <article th:replace="components/personal-plan-info/personal-plan-info :: personal-plan-info"></article>
 </section>
 </body>
 </html>

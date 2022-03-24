@@ -12,8 +12,8 @@ const totalLeadsConfig = {
         ],
         datasets: [{
                 label: new Date().getFullYear(),
-                backgroundColor: "lime",
-                borderColor: "lime",
+                backgroundColor: "#A9BCD0",
+                borderColor: "#A9BCD0",
                 data: [30, 78, 56, 34, 100, 45, 13],
                 fill: false,
                 barThickness: 8,
@@ -21,8 +21,8 @@ const totalLeadsConfig = {
             {
                 label: new Date().getFullYear() - 1,
                 fill: false,
-                backgroundColor: "navy",
-                borderColor: "navy",
+                backgroundColor: "#58A4B0",
+                borderColor: "#58A4B0",
                 data: [27, 68, 86, 74, 10, 4, 87],
                 barThickness: 8,
             },

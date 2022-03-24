@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<article th:fragment="personal-region-language-info" class="p-6 w-full h-full flex flex-col">
+    <h6 class="uppercase text-blueGray-400 mb-3 text-xs font-semibold">
+       Region and language:
+    </h6>
+    <hr class="w-full mb-4">
+    <div class="flex flex-1">
+        <div class="flex w-2/5 items-center justify-center personal-region-language-icon text-success">
+            <i class="fa fa-globe"></i>
+        </div>
+        <div class="flex flex-col w-3/5">
+            <div class="flex-1 flex flex-col justify-center">
+                <div class="mb-4 uppercase text-success">Language: </div>
+                <div class="text-xl font-bold cursor-pointer"><b class="mr-2">🇺🇸</b>United States <i class="fa fa-caret-down ml-2"></i></div>
+            </div>
+            <hr class="my-4">
+            <div class="flex-1 flex flex-col justify-center cursor-pointer">
+                <div class="mb-4 uppercase text-success">Time zone: </div>
+                <div class="text-xl font-bold cursor-pointer"><b class="mr-2">🌎</b>Pacific Standard Time (PST)<i class="fa fa-caret-down ml-2"></i></div>
+            </div>
+        </div>
+    </div>
+</article>
+</body>
+</html>
