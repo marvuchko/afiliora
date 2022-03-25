@@ -1,19 +1,19 @@
 const totalLeadsConfig = {
-    type: "bar",
+    type: 'bar',
     data: {
         labels: [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
         ],
         datasets: [{
                 label: new Date().getFullYear(),
-                backgroundColor: "#A9BCD0",
-                borderColor: "#A9BCD0",
+                backgroundColor: '#A9BCD0',
+                borderColor: '#A9BCD0',
                 data: [30, 78, 56, 34, 100, 45, 13],
                 fill: false,
                 barThickness: 8,
@@ -21,8 +21,8 @@ const totalLeadsConfig = {
             {
                 label: new Date().getFullYear() - 1,
                 fill: false,
-                backgroundColor: "#58A4B0",
-                borderColor: "#58A4B0",
+                backgroundColor: '#58A4B0',
+                borderColor: '#58A4B0',
                 data: [27, 68, 86, 74, 10, 4, 87],
                 barThickness: 8,
             },
@@ -33,35 +33,35 @@ const totalLeadsConfig = {
         responsive: true,
         title: {
             display: false,
-            text: "Orders Chart",
+            text: 'Orders Chart',
         },
         tooltips: {
-            mode: "index",
+            mode: 'index',
             intersect: false,
         },
         hover: {
-            mode: "nearest",
+            mode: 'nearest',
             intersect: true,
         },
         legend: {
             labels: {
-                fontColor: "black",
+                fontColor: 'black',
             },
-            align: "start",
-            position: "bottom",
+            align: 'start',
+            position: 'bottom',
         },
         scales: {
             xAxes: [{
                 display: false,
                 scaleLabel: {
                     display: true,
-                    labelString: "Month",
+                    labelString: 'Month',
                 },
                 gridLines: {
                     borderDash: [2],
                     borderDashOffset: [2],
-                    color: "rgba(33, 37, 41, 0.3)",
-                    zeroLineColor: "rgba(33, 37, 41, 0.3)",
+                    color: 'rgba(33, 37, 41, 0.3)',
+                    zeroLineColor: 'rgba(33, 37, 41, 0.3)',
                     zeroLineBorderDash: [2],
                     zeroLineBorderDashOffset: [2],
                 },
@@ -70,14 +70,14 @@ const totalLeadsConfig = {
                 display: true,
                 scaleLabel: {
                     display: false,
-                    labelString: "Value",
+                    labelString: 'Value',
                 },
                 gridLines: {
                     borderDash: [2],
                     drawBorder: false,
                     borderDashOffset: [2],
-                    color: "rgba(33, 37, 41, 0.2)",
-                    zeroLineColor: "rgba(33, 37, 41, 0.15)",
+                    color: 'rgba(33, 37, 41, 0.2)',
+                    zeroLineColor: 'rgba(33, 37, 41, 0.15)',
                     zeroLineBorderDash: [2],
                     zeroLineBorderDashOffset: [2],
                 },
@@ -86,5 +86,5 @@ const totalLeadsConfig = {
     },
 };
 
-const totalLeadsCtx = document.getElementById("total-leads-bar-chart").getContext("2d");
+const totalLeadsCtx = document.getElementById('total-leads-bar-chart').getContext('2d');
 window.totalLeadsChart = new Chart(totalLeadsCtx, totalLeadsConfig);

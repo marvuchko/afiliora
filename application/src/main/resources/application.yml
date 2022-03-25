@@ -32,4 +32,4 @@ spring:
 affiliora:
   mvc:
     enabled: ${AFFILIORA_MVC_ENABLED:true}
-    cache-max-minutes: ${AFFILIORA_MVC_CACHE_MAX_MINUTES:0}
+    cache-max-minutes: ${AFFILIORA_MVC_CACHE_MAX_MINUTES:60}

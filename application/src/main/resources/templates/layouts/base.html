@@ -4,13 +4,17 @@
 >
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/pages/profile.css">
     <title>[[${title}]]</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="/js/external/chart.js"></script>
+    <script src="/js/external/umbrella.js"></script>
+    <script src="/js/external/sweetalert2.js" async></script>
 </head>
-<body>
+<body class="invisible">
 <header th:replace="components/navbar/navbar :: navbar"></header>
 <section class="page-content">
     <section class="search-and-user">
@@ -34,10 +38,7 @@
     <section class="grid" th:replace="this :: content"></section>
     <footer class="page-footer"></footer>
 </section>
+<script src="/js/base.js"></script>
 <script src="/js/common.js"></script>
-<script src="/js/dashboard/total-leads-bar-chart.js"></script>
-<script src="/js/dashboard/total-sales-bar-chart.js"></script>
-<script src="/js/dashboard/affiliate-pie-chart.js"></script>
-<script src="/js/dashboard/clicks-polar-chart.js"></script>
 </body>
 </html>
