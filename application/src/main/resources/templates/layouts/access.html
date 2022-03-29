@@ -10,10 +10,10 @@
     <title>[[${title}]]</title>
     <link rel="stylesheet" href="/css/layouts/access/access.css" />
     <script src="/js/external/umbrella.js"></script>
+    <script src="/js/base.js"></script>
 </head>
-<body class="invisible">
+<body>
 <form th:replace="this :: content"></form>
 <footer th:replace="components/footer/footer :: footer"></footer>
-<script src="/js/base.js"></script>
 </body>
 </html>

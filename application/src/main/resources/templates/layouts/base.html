@@ -13,8 +13,9 @@
     <script src="/js/external/chart.js"></script>
     <script src="/js/external/umbrella.js"></script>
     <script src="/js/external/sweetalert2.js" async></script>
+    <script src="/js/base.js"></script>
 </head>
-<body class="invisible">
+<body>
 <header th:replace="components/navbar/navbar :: navbar"></header>
 <section class="page-content">
     <section class="search-and-user">
@@ -38,7 +39,6 @@
     <section class="grid" th:replace="this :: content"></section>
     <footer class="page-footer"></footer>
 </section>
-<script src="/js/base.js"></script>
 <script src="/js/common.js"></script>
 </body>
 </html>

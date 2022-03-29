@@ -161,8 +161,8 @@ input {
 
 .search-and-user {
   display: grid;
-  grid-template-columns: 1fr auto;
-  grid-column-gap: 50px;
+  grid-template-columns: 1fr 14rem;
+  grid-column-gap: 25px;
   align-items: center;
   background: var(--page-content-bgColor);
   margin-bottom: 30px;
@@ -195,6 +195,7 @@ input {
 .search-and-user .profile {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .search-and-user .profile .greeting {
