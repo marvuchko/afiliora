@@ -1,0 +1,62 @@
+.tabs {
+    display:flex;
+    position:relative;
+}
+
+.tabs * {
+    z-index:2;
+}
+
+.tabs input[type=radio] {
+    display:none;
+}
+
+.tabs input[type=radio]:checked + label {
+    color:var(--blue);
+}
+
+.tabs input[type=radio]:checked + label > .notification {
+    background-color:var(--blue);
+    color:#fff;
+}
+
+.tab {
+    align-items:center;
+    cursor:pointer;
+    display:flex;
+    font-size:1.25rem;
+    font-weight:500;
+    height:5rem;
+    justify-content:center;
+    transition:color .15s ease-in;
+    width:18rem;
+}
+
+.tabs input[id=radio-1]:checked ~ .glider {
+    transform:translateX(0);
+}
+
+.tabs input[id=radio-2]:checked ~ .glider {
+    transform:translateX(100%);
+}
+
+.tabs input[id=radio-3]:checked ~ .glider {
+    transform:translateX(200%);
+}
+
+.tabs .glider {
+    border-bottom-width:4px;
+    border-color:var(--blue);
+    display:flex;
+    height:5rem;
+    position:absolute;
+    transition:.25s ease-out;
+    width:18rem;
+    z-index:1;
+}
+
+@media (max-width: 700px) {
+    .tabs {
+        transform:scale(0.6);
+    }
+}

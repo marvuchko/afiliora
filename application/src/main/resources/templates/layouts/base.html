@@ -6,17 +6,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[[${title}]]</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/pages/profile.css">
-    <title>[[${title}]]</title>
+    <link rel="stylesheet" href="/css/external/aos.css" />
+    <script src="/js/external/aos.js"></script>
     <script src="/js/external/chart.js"></script>
     <script src="/js/external/umbrella.js"></script>
     <script src="/js/external/sweetalert2.js" async></script>
     <script src="/js/base.js"></script>
 </head>
 <body>
-<header th:replace="components/navbar/navbar :: navbar"></header>
+<header data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-duration="150"
+        data-aos-offset="0"
+        th:replace="components/navbar/navbar :: navbar"></header>
 <section class="page-content">
     <section class="search-and-user">
         <form class="relative">
@@ -36,7 +42,7 @@
             </div>
         </div>
     </section>
-    <section class="grid" th:replace="this :: content"></section>
+    <section class="page-grid" th:replace="this :: content"></section>
     <footer class="page-footer"></footer>
 </section>
 <script src="/js/common.js"></script>

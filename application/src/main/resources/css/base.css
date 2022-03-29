@@ -83,6 +83,18 @@ body {
     background: var(--page-header-txtColor);
 }
 
+bg-content {
+    background: var(--page-content-blockColor);
+}
+
 .border-disabled {
     border-color: var(--page-header-txtColor);
+}
+
+.border-link {
+    border-color: var(--blue);
+}
+
+.line-gradient-separator {
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0, var(--page-header-txtColor) 50%, rgba(255,255,255,0) 100%);
 }

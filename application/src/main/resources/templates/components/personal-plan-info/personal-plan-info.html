@@ -7,34 +7,52 @@
     </h6>
     <hr class="w-full mb-4">
     <div class="flex-1 personal-plan-grid">
-        <div>Asd</div>
+        <div class="flex flex-col items-center">
+            <fieldset class="flex flex-col flex-1 justify-center w-full border-2 py-4 px-6">
+                <legend class="mb-4 uppercase text-success">Selected Plan: </legend>
+                <div class="w-full text-2xl font-bold cursor-pointer flex flex-1 items-center justify-between border-4 py-2 px-4">
+                    <b class="text-4xl">💵</b>
+                    <sub class="mx-2">Premium</sub>
+                    <i class="fa fa-caret-down ml-2"></i>
+                </div>
+                <button class="p-2 w-full shadow bg-link text-secondary mt-4">
+                    <i class="fa fa-money mr-2"></i>
+                    Manage your plan
+                </button>
+            </fieldset>
+        </div>
         <div class="h-full border border-2"></div>
-        <div class="flex flex-col justify-center items-center">
-            <div class="flex flex-col justify-center w-full">
-                <div class="mb-4 uppercase text-success">Credit Card: </div>
+        <div class="flex flex-col items-center">
+            <fieldset class="flex flex-col flex-1 justify-center w-full border-2 py-4 px-6">
+                <legend class="mb-4 uppercase text-success">Selected Credit Card: </legend>
                 <div class="w-full text-2xl font-bold cursor-pointer flex flex-1 items-center justify-between border-4 py-2 px-4">
                     <b class="text-4xl">💳</b>
                     <sub class="mx-2">**** **** **** 4600</sub>
                     <i class="fa fa-caret-down ml-2"></i>
                 </div>
-            </div>
-            <button class="p-2 w-full shadow bg-link text-secondary mt-4 mx-4">
-                <i class="fa fa-credit-card mr-2"></i>
-                Manage your credit cards
-            </button>
+                <button class="p-2 w-full shadow bg-link text-secondary mt-4">
+                    <i class="fa fa-credit-card mr-2"></i>
+                    Manage your credit cards
+                </button>
+            </fieldset>
         </div>
-        <div class="h-full border border-2"></div>
         <form class="flex items-center">
-            <fieldset class="w-full h-full grid grid-cols-2 border-2 py-4 px-6">
-                <legend class="mb-4 uppercase text-success">Add credit card:</legend>
-                <label>
-                    Card number:
-                    <input type="text" class="w-5/6 rounded-2xl border-solid border-2 px-4 py-2 text-gray-300 cursor-pointer bg-transparent" placeholder="Twitter profile link...">
-                </label>
-                <label>
-                    Card name:
-                    <input type="text" class="w-5/6 rounded-2xl border-solid border-2 px-4 py-2 text-gray-300 cursor-pointer bg-transparent" placeholder="Twitter profile link...">
-                </label>
+            <fieldset class="w-full h-full grid grid-cols-5 gap-4 border-2 py-4 px-6">
+                <legend class="uppercase text-success">Add credit card:</legend>
+                <div class="col-start-1 col-end-3 flex justify-between items-center">
+                    <span class="visa w-12 h-8 shadow rounded"></span>
+                    <span class="mastercard w-12 h-8 shadow rounded"></span>
+                    <span class="amex w-12 h-8 shadow rounded"></span>
+                    <span class="discover w-12 h-8 shadow rounded"></span>
+                </div>
+                <input type="text" class="col-start-3 col-end-6 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent" placeholder="Card number:  ">
+                <input type="text" class="col-start-1 col-end-4 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent" placeholder="Card name:  ">
+                <input type="text" class="col-start-4 col-end-6 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent" placeholder="Exp. date:  ">
+                <input type="text" class="col-start-1 col-end-2 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent" placeholder="CVV:  ">
+                <button class="col-start-2 col-end-6 p-2 w-full shadow bg-link text-secondary">
+                    <i class="fa fa-plus mr-2"></i>
+                    Add new credit card
+                </button>
             </fieldset>
         </form>
     </div>

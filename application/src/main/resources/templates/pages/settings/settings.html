@@ -2,8 +2,31 @@
 <html xmlns:th="http://www.thymeleaf.org"
       th:include="layouts/base :: base(title='Affiliora | Settings')">
 <body>
-<section th:fragment="content">
-    <article>Settings</article>
+<section th:fragment="content" class="page-grid">
+    <article class="single px-6">
+        <div class="h-20 w-full flex justify-center">
+            <div class="text-disabled w-full flex justify-center border-b-2 justify-center">
+                <div class="tabs">
+                    <input type="radio" id="radio-1" name="tabs" checked />
+                    <label class="tab px-6" for="radio-1">
+                        <i class="fa fa-bell mr-4"></i>
+                        Notifications
+                    </label>
+                    <input type="radio" id="radio-2" name="tabs" checked />
+                    <label class="tab px-6" for="radio-2">
+                        <b class="fa fa-user mr-4"></b>
+                        Affiliates
+                    </label>
+                    <input type="radio" id="radio-3" name="tabs" checked />
+                    <label class="tab px-6" for="radio-3">
+                        <i class="fa fa-link mr-4"></i>
+                        Links
+                    </label>
+                    <span class="glider border-link border-b-2"></span>
+                </div>
+            </div>
+        </div>
+    </article>
 </section>
 </body>
 </html>
