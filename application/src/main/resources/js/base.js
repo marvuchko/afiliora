@@ -5,5 +5,4 @@ window.addEventListener('beforeunload', () => {
 window.addEventListener('load', () => {
      u('body').removeClass("blur-sm");
      AOS.init();
-     console.log("Kurac!");
 });
