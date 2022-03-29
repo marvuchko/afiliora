@@ -33,6 +33,8 @@
 body {
   font: 16px/1.5 "Poppins", sans-serif;
   background: var(--page-header-bgColor);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .text-primary {
@@ -97,4 +99,28 @@ bg-content {
 
 .line-gradient-separator {
     background: linear-gradient(90deg, rgba(255,255,255,0) 0, var(--page-header-txtColor) 50%, rgba(255,255,255,0) 100%);
+}
+
+/***** Scrollbar ******/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--light-steel-blue);
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+  border-radius: 8px;
 }
