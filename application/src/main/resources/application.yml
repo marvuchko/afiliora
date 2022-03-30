@@ -4,6 +4,10 @@ server:
     enabled: true
     mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
     min-response-size: 1024
+  error:
+    whitelabel:
+      enabled: false
+    path: /error
 
 spring:
 
@@ -14,14 +18,14 @@ spring:
     location: classpath:banner.txt
 
   jpa:
-    open-in-view: false
+    open-in-view: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         ddl-auto: update
 
   datasource:
-    jdbc-url: jdbc:postgresql://${DB_URL:localhost}:${DB_PORT:5432}/${DB_NAME:affiliora_db}?currentSchema=${DB_SCHEMA:core}
+    url: jdbc:postgresql://${DB_URL:localhost}:${DB_PORT:5432}/${DB_NAME:affiliora_db}?currentSchema=${DB_SCHEMA:core}
     username: ${DB_USERNAME:affiliora}
     password: ${DB_PASSWORD:affiliora}
 

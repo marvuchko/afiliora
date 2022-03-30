@@ -17,7 +17,7 @@ fi
 echo "Code verified successfully!"
 
 echo "Checking if the project can build pushing the changes remotely..."
-./mvnw clean compile
+./mvnw compile
 x=$?
 
 if [[ $x -ne 0 ]]; then
@@ -28,7 +28,7 @@ fi
 echo "Project built successfully!"
 
 echo "Executing tests..."
-./mvnw clean test
+./mvnw test
 x=$?
 
 if [[ $x -ne 0 ]]; then

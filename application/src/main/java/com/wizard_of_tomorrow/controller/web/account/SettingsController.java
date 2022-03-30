@@ -5,6 +5,7 @@ import java.util.concurrent.CompletableFuture;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping(SettingsController.BASE_URL)
@@ -16,10 +17,9 @@ public class SettingsController extends AbstractViewController {
     super("pages/settings/settings");
   }
 
-  @Override
   @GetMapping
-  public CompletableFuture<String> getView() {
-    return super.getView();
+  protected CompletableFuture<ModelAndView> getPage() {
+    return modelAndViewFuture();
   }
 
 }
