@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>query</artifactId>
-    <version>${parent.version}</version>
+    <version>${project.parent.version}</version>
     <name>${project.artifactId}</name>
 
     <dependencies>

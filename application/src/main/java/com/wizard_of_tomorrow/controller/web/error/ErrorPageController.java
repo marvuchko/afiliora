@@ -2,6 +2,7 @@ package com.wizard_of_tomorrow.controller.web.error;
 
 import com.wizard_of_tomorrow.controller.AbstractViewController;
 import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
@@ -22,7 +23,7 @@ public class ErrorPageController extends AbstractViewController implements Error
   }
 
   @GetMapping
-  public String getView(HttpServletRequest request, ModelMap model) {
+  public CompletableFuture<String> getView(HttpServletRequest request, ModelMap model) {
     var errorCode = getErrorCode(request);
     model.addAttribute("errorCode", errorCode);
     return super.getView();

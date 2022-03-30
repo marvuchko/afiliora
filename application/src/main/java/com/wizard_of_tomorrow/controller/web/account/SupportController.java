@@ -1,6 +1,7 @@
 package com.wizard_of_tomorrow.controller.web.account;
 
 import com.wizard_of_tomorrow.controller.AbstractViewController;
+import java.util.concurrent.CompletableFuture;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ public class SupportController extends AbstractViewController {
 
   @Override
   @GetMapping
-  public String getView() {
+  public CompletableFuture<String> getView() {
     return super.getView();
   }
 
