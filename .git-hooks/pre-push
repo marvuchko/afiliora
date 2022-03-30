@@ -3,17 +3,36 @@ set -e
 
 # capture path
 PWD=$(pwd)
-
-echo "Executing tests before pushing the code remotely!"
-
 cd "$PWD" || exit
-./mvnw clean test
 
+echo "Validating the code before pushing the changes remotely..."
+./mvnw clean validate
 x=$?
 
 if [[ $x -ne 0 ]]; then
-  echo "Error while testing the code";
-  cd "$PWD";
+  echo "Error while validating the code, there were some checkstyle errors!";
+  exit $x;
+fi
+
+echo "Code verified successfully!"
+
+echo "Checking if the project can build pushing the changes remotely..."
+./mvnw clean compile
+x=$?
+
+if [[ $x -ne 0 ]]; then
+  echo "Error while building the code!";
+  exit $x;
+fi
+
+echo "Project built successfully!"
+
+echo "Executing tests..."
+./mvnw clean test
+x=$?
+
+if [[ $x -ne 0 ]]; then
+  echo "Error while testing the code!";
   exit $x;
 fi
 
