@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(SettingsController.BASE_URL)
 public class SettingsController extends AbstractViewController {
 
-    public static final String BASE_URL = "/settings";
+  public static final String BASE_URL = "/settings";
 
-    public SettingsController() {
-        super("pages/settings/settings");
-    }
+  public SettingsController() {
+    super("pages/settings/settings");
+  }
 
-    @Override
-    @GetMapping
-    public String getView() {
-        return super.getView();
-    }
+  @Override
+  @GetMapping
+  public String getView() {
+    return super.getView();
+  }
 
 }

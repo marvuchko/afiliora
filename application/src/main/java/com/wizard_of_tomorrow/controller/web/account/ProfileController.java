@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(ProfileController.BASE_URL)
 public class ProfileController extends AbstractViewController {
 
-    public static final String BASE_URL = "/profile";
+  public static final String BASE_URL = "/profile";
 
-    public ProfileController() {
-        super( "pages/profile/profile");
-    }
+  public ProfileController() {
+    super("pages/profile/profile");
+  }
 
-    @Override
-    @GetMapping
-    public String getView() {
-        return super.getView();
-    }
+  @Override
+  @GetMapping
+  public String getView() {
+    return super.getView();
+  }
 
 }

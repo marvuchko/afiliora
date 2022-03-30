@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(SupportController.BASE_URL)
 public class SupportController extends AbstractViewController {
 
-    public static final String BASE_URL = "/support";
+  public static final String BASE_URL = "/support";
 
-    public SupportController() {
-        super("pages/support/support");
-    }
+  public SupportController() {
+    super("pages/support/support");
+  }
 
-    @Override
-    @GetMapping
-    public String getView() {
-        return super.getView();
-    }
+  @Override
+  @GetMapping
+  public String getView() {
+    return super.getView();
+  }
 
 }

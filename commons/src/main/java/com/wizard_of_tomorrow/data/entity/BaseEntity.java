@@ -1,16 +1,18 @@
 package com.wizard_of_tomorrow.data.entity;
 
-import lombok.*;
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import java.io.Serializable;
-import java.time.LocalDateTime;
 
 @Setter
 @Getter
@@ -19,20 +21,20 @@ import java.time.LocalDateTime;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public abstract class BaseEntity<K extends Serializable> {
 
-    @Id
-    @GeneratedValue
-    K id;
+  @Id
+  @GeneratedValue
+  K id;
 
-    @CreatedDate
-    LocalDateTime createdAt;
+  @CreatedDate
+  LocalDateTime createdAt;
 
-    @LastModifiedBy
-    LocalDateTime updatedAt;
+  @LastModifiedBy
+  LocalDateTime updatedAt;
 
-    @CreatedBy
-    K createdBy;
+  @CreatedBy
+  K createdBy;
 
-    @LastModifiedBy
-    K updatedBy;
+  @LastModifiedBy
+  K updatedBy;
 
 }

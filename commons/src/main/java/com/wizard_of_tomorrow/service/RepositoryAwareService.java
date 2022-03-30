@@ -11,6 +11,6 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public abstract class RepositoryAwareService<R extends BaseRepository<?, ?>> {
 
-    final R repository;
+  final R repository;
 
 }

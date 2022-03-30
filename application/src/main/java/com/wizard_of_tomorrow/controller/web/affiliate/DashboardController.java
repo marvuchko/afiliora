@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(DashboardController.BASE_URL)
 public class DashboardController extends AbstractViewController {
 
-    public static final String BASE_URL = "/dashboard";
+  public static final String BASE_URL = "/dashboard";
 
-    public DashboardController() {
-        super("pages/dashboard/dashboard");
-    }
+  public DashboardController() {
+    super("pages/dashboard/dashboard");
+  }
 
-    @Override
-    @GetMapping
-    public String getView() {
-        return super.getView();
-    }
+  @Override
+  @GetMapping
+  public String getView() {
+    return super.getView();
+  }
 
 }

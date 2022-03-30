@@ -10,10 +10,10 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PROTECTED)
 public abstract class AbstractViewController {
 
-    final String view;
+  final String view;
 
-    protected String redirectTo(String url) {
-        return "redirect:%s".formatted(url);
-    }
+  protected String redirectTo(String url) {
+    return "redirect:%s".formatted(url);
+  }
 
 }

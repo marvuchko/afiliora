@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(LoginController.BASE_URL)
 public class LoginController extends AbstractViewController {
 
-    public static final String BASE_URL = "/access/login";
+  public static final String BASE_URL = "/access/login";
 
-    public LoginController() {
-        super("pages/login/login");
-    }
+  public LoginController() {
+    super("pages/login/login");
+  }
 
-    @Override
-    @GetMapping
-    public String getView() {
-        return super.getView();
-    }
+  @Override
+  @GetMapping
+  public String getView() {
+    return super.getView();
+  }
 }

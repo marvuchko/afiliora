@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(RegistrationController.BASE_URL)
 public class RegistrationController extends AbstractViewController {
 
-    public static final String BASE_URL = "/access/register";
+  public static final String BASE_URL = "/access/register";
 
-    public RegistrationController() {
-        super("pages/register/register");
-    }
+  public RegistrationController() {
+    super("pages/register/register");
+  }
 
-    @Override
-    @GetMapping
-    public String getView() {
-        return super.getView();
-    }
+  @Override
+  @GetMapping
+  public String getView() {
+    return super.getView();
+  }
 
 }
