@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+# capture path
+PWD=$(pwd)
+
+echo "Executing tests before pushing the code remotely!"
+
+cd "$PWD" || exit
+./mvnw clean test
+
+x=$?
+
+if [[ $x -ne 0 ]]; then
+  echo "Error while testing the code";
+  cd "$PWD";
+  exit $x;
+fi
+
+echo "Tests executed successfully!"
