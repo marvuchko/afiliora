@@ -25,15 +25,7 @@
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Notifications', icon='bell', href='/profile')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Settings', icon='cogs', href='/settings')"></li>
                 <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Logout', icon='sign-out', href='/access/login')"></li>
-                <li>
-                    <div class="switch">
-                        <input checked id="mode" type="checkbox">
-                        <label for="mode">
-                            <span></span>
-                            <span>Dark Mode</span>
-                        </label>
-                    </div>
-                </li>
+                <li></li>
             </ul>
         </nav>
     </header>

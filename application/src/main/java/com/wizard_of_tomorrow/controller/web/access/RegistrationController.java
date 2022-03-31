@@ -19,7 +19,7 @@ public class RegistrationController extends AbstractViewController {
 
   @GetMapping
   protected CompletableFuture<ModelAndView> getPage() {
-    return modelAndViewFuture();
+    return toFuture(newModelAndView());
   }
 
 }

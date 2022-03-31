@@ -3,7 +3,7 @@
       th:include="layouts/access :: access(title='Affiliora | Login')"
 >
 <body>
-<form th:fragment="content" class="content w-screen h-screen">
+<form th:fragment="content" action="/dashboard" class="content w-screen h-screen" method="get" onsubmit="beforeSubmit('#login-button')">
     <div data-aos="fade-zoom-in"
          data-aos-easing="ease-in-back"
          data-aos-duration="150"
@@ -34,10 +34,10 @@
         </div>
         <hr class="mb-4">
         <div class="flex items-center justify-between mb-4">
-            <button class="font-bold py-2 px-4 rounded bg-link text-secondary"
-                    type="button"
-                    onclick="window.location.href='/dashboard'">
-                <i class="fa fa-sign-in"></i>
+            <button class="w-28 font-bold py-2 px-4 rounded bg-link text-secondary shadow"
+                    type="submit"
+                    id="login-button">
+                <i class="fa fa-sign-in mr-2"></i>
                 Log in
             </button>
             <a class="inline-block align-baseline font-bold text-sm text-link" href="#">

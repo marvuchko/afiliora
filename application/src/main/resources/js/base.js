@@ -1,4 +1,4 @@
-window.addEventListener('beforeunload', () => {
+window.addEventListener('unload', () => {
     u('body').addClass("blur-sm");
 });
 

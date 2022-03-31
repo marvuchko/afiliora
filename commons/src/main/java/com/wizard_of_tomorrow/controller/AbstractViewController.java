@@ -18,8 +18,8 @@ public abstract class AbstractViewController extends BaseController {
     return newModelAndView("redirect:%s".formatted(url));
   }
 
-  protected CompletableFuture<ModelAndView> modelAndViewFuture() {
-    return completedFuture(newModelAndView());
+  protected CompletableFuture<ModelAndView> toFuture(ModelAndView modelAndView) {
+    return completedFuture(modelAndView);
   }
 
   protected ModelAndView newModelAndView() {

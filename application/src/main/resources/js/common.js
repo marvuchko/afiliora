@@ -1,20 +1,9 @@
-const darkMode = localStorage.getItem('dark-mode');
+const beforeSubmit = (target, callback) => {
+    u(target).html('<i class="fa fa-spinner fa-spin"></i>');
 
-window.addEventListener('load', () => {
-     if (darkMode === 'false') {
-         u('html').addClass('light-mode');
-         u('#logo-image').attr('src', '/images/logo/affiliora-dark.png');
-         u('.switch span:last-child').html('Light Mode');
-     }
-     u('.switch input').attr('checked', darkMode === 'true');
-});
+    if (callback) {
+        callback();
+    }
 
-u('.switch input').on('input', ({ target }) => {
-    const checked = u(target).is(':checked');
-
-    u('html').toggleClass('light-mode');
-    u('#logo-image').attr('src', `/images/logo/affiliora-${checked ? 'light' : 'dark'}.png`);
-    u('.switch span:last-child').html(checked ? 'Dark Mode' : 'Light Mode');
-
-    localStorage.setItem('dark-mode', checked);
-});
+    return true;
+}
