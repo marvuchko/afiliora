@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-th-include="layouts/access :: access(title='Affiliora | Login')">
 <body>
-<form data-th-fragment="content" action="/dashboard" class="content w-screen h-screen" method="get"
+<form data-th-fragment="content" data-th-action="@{/dashboard}" class="content w-screen h-screen" method="get"
       onsubmit="beforeSubmit('#login-button')">
     <div data-aos="fade-zoom-in"
          data-aos-easing="ease-in-back"

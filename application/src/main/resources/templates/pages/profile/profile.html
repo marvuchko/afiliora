@@ -2,26 +2,11 @@
 <html data-th-include="layouts/base :: base(title='Affiliora | Profile')">
 <body>
 <section class="page-grid" data-th-fragment="content">
-    <article data-aos="fade-zoom-in"
-             data-aos-easing="ease-in-back"
-             data-aos-duration="150"
-             data-aos-offset="0"
-             data-th-replace="components/personal-info/personal-info :: personal-info"></article>
-    <article data-aos="fade-zoom-in"
-             data-aos-easing="ease-in-back"
-             data-aos-duration="150"
-             data-aos-offset="0"
-             data-th-replace="components/personal-region-language-info/personal-region-language-info :: personal-region-language-info"></article>
-    <article data-aos="fade-zoom-in"
-             data-aos-easing="ease-in-back"
-             data-aos-duration="150"
-             data-aos-offset="0"
-             data-th-replace="components/personal-activity/personal-activity :: personal-activity"></article>
-    <article data-aos="fade-zoom-in"
-             data-aos-easing="ease-in-back"
-             data-aos-duration="150"
-             data-aos-offset="0"
-             data-th-replace="components/personal-plan-info/personal-plan-info :: personal-plan-info"></article>
+    <article data-th-replace="components/personal-info/personal-info :: personal-info"></article>
+    <article
+            data-th-replace="components/personal-region-language-info/personal-region-language-info :: personal-region-language-info"></article>
+    <article data-th-replace="components/personal-activity/personal-activity :: personal-activity"></article>
+    <article data-th-replace="components/personal-plan-info/personal-plan-info :: personal-plan-info"></article>
 </section>
 </body>
 </html>
