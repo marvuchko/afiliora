@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <body>
-<div th:fragment="subscription-info-card" class="w-72 h-full p-4 rounded flex flex-col items-center justify-between">
+<div data-th-fragment="subscription-info-card"
+     class="w-72 h-full p-4 rounded flex flex-col items-center justify-between">
     <div class="w-full">
         <p class="font-bold text-3xl">[[${cardTitle}]]:</p>
     </div>

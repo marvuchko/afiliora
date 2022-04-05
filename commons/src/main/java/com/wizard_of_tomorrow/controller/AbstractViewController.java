@@ -23,7 +23,7 @@ public abstract class AbstractViewController extends BaseController {
   }
 
   protected ModelAndView newModelAndView() {
-    return new ModelAndView(view);
+    return newModelAndView(view);
   }
 
   protected ModelAndView newModelAndView(String viewName) {

@@ -105,22 +105,22 @@ bg-content {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--white);
+  background: var(--page-content-bgColor);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--light-steel-blue);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--blue);
-  border-radius: 8px;
+  border-radius: 4px;
 }

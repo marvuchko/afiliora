@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <body>
-<article th:fragment="personal-plan-info" class="p-6 w-full h-full flex flex-col">
+<article data-th-fragment="personal-plan-info" class="p-6 w-full h-full flex flex-col">
     <h6 class="uppercase text-blueGray-400 mb-3 text-xs font-semibold">
         Selected plan <b class="mx-2">|</b> payment methods:
     </h6>
@@ -9,7 +9,7 @@
     <div class="flex-1 personal-plan-grid">
         <div class="flex flex-col items-center">
             <fieldset class="flex flex-col flex-1 justify-center w-full border-2 py-4 px-6">
-                <legend class="mb-4 uppercase text-success">Selected Plan: </legend>
+                <legend class="mb-4 uppercase text-success">Selected Plan:</legend>
                 <div class="w-full text-2xl font-bold cursor-pointer flex flex-1 items-center justify-between border-4 py-2 px-4">
                     <b class="text-4xl">💵</b>
                     <sub class="mx-2">Premium</sub>
@@ -24,7 +24,7 @@
         <div class="h-full border border-2"></div>
         <div class="flex flex-col items-center">
             <fieldset class="flex flex-col flex-1 justify-center w-full border-2 py-4 px-6">
-                <legend class="mb-4 uppercase text-success">Selected Credit Card: </legend>
+                <legend class="mb-4 uppercase text-success">Selected Credit Card:</legend>
                 <div class="w-full text-2xl font-bold cursor-pointer flex flex-1 items-center justify-between border-4 py-2 px-4">
                     <b class="text-4xl">💳</b>
                     <sub class="mx-2">**** **** **** 4600</sub>
@@ -45,10 +45,18 @@
                     <span class="amex w-12 h-8 shadow rounded"></span>
                     <span class="discover w-12 h-8 shadow rounded"></span>
                 </div>
-                <input type="text" class="col-start-3 col-end-6 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent" placeholder="Card number:  ">
-                <input type="text" class="col-start-1 col-end-4 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent" placeholder="Card name:  ">
-                <input type="text" class="col-start-4 col-end-6 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent" placeholder="Exp. date:  ">
-                <input type="text" class="col-start-1 col-end-2 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent" placeholder="CVV:  ">
+                <input type="text"
+                       class="col-start-3 col-end-6 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent"
+                       placeholder="Card number:  ">
+                <input type="text"
+                       class="col-start-1 col-end-4 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent"
+                       placeholder="Card name:  ">
+                <input type="text"
+                       class="col-start-4 col-end-6 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent"
+                       placeholder="Exp. date:  ">
+                <input type="text"
+                       class="col-start-1 col-end-2 border-solid border-2 px-2 py-1 text-gray-300 cursor-pointer bg-transparent"
+                       placeholder="CVV:  ">
                 <button class="col-start-2 col-end-6 p-2 w-full shadow bg-link text-secondary">
                     <i class="fa fa-plus mr-2"></i>
                     Add new credit card

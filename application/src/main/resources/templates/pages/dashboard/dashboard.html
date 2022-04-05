@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      th:include="layouts/base :: base(title='Affiliora | Dashboard')">
+<html data-th-include="layouts/base :: base(title='Affiliora | Dashboard')">
 <body>
-<section class="page-grid" th:fragment="content">
+<section class="page-grid" data-th-fragment="content">
     <article data-aos="fade-zoom-in"
              data-aos-easing="ease-in-back"
              data-aos-duration="150"
              data-aos-offset="0"
-            th:replace="components/subscription-info/subscription-info :: subscription-info"></article>
+             data-th-replace="components/subscription-info/subscription-info :: subscription-info"></article>
     <article data-aos="fade-zoom-in"
              data-aos-easing="ease-in-back"
              data-aos-duration="150"
              data-aos-offset="0"
-            th:replace="components/chart/chart :: chart(chartId='total-leads-bar-chart', chartTitle='Total leads by year', chartSubtitle='Statistics')"
-            class="flex justify-evenly">
-    </article>
-    <article data-aos="fade-zoom-in"
-             data-aos-easing="ease-in-back"
-             data-aos-duration="150"
-             data-aos-offset="0"
-             th:replace="components/chart/chart :: chart(chartId='total-sales-bar-chart', chartTitle='Total conversions by year', chartSubtitle='Statistics')"
+             data-th-replace="components/chart/chart :: chart(chartId='total-leads-bar-chart', chartTitle='Total leads by year', chartSubtitle='Statistics')"
              class="flex justify-evenly">
     </article>
     <article data-aos="fade-zoom-in"
              data-aos-easing="ease-in-back"
              data-aos-duration="150"
              data-aos-offset="0"
-             th:replace="components/chart/chart :: chart(chartId='affiliate-pie-chart', chartTitle='Total affiliates by month', chartSubtitle='Statistics')"
+             data-th-replace="components/chart/chart :: chart(chartId='total-sales-bar-chart', chartTitle='Total conversions by year', chartSubtitle='Statistics')"
              class="flex justify-evenly">
     </article>
     <article data-aos="fade-zoom-in"
              data-aos-easing="ease-in-back"
              data-aos-duration="150"
              data-aos-offset="0"
-             th:replace="components/chart/chart :: chart(chartId='clicks-polar-chart', chartTitle='Total clicks by month', chartSubtitle='Statistics')"
+             data-th-replace="components/chart/chart :: chart(chartId='affiliate-pie-chart', chartTitle='Total affiliates by month', chartSubtitle='Statistics')"
              class="flex justify-evenly">
     </article>
     <article data-aos="fade-zoom-in"
              data-aos-easing="ease-in-back"
              data-aos-duration="150"
              data-aos-offset="0"
-             th:replace="components/spending-info/spending-info :: spending-info"></article>
+             data-th-replace="components/chart/chart :: chart(chartId='clicks-polar-chart', chartTitle='Total clicks by month', chartSubtitle='Statistics')"
+             class="flex justify-evenly">
+    </article>
+    <article data-aos="fade-zoom-in"
+             data-aos-easing="ease-in-back"
+             data-aos-duration="150"
+             data-aos-offset="0"
+             data-th-replace="components/spending-info/spending-info :: spending-info"></article>
 </section>
 </body>
 </html>

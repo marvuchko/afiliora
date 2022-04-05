@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      th:fragment="access"
->
+<html data-th-fragment="access">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>[[${title}]]</title>
-    <link rel="stylesheet" href="/css/layouts/access/access.css" />
-    <link rel="stylesheet" href="/css/external/aos.css" />
-    <script src="/js/external/aos.js"></script>
-    <script src="/js/external/umbrella.js"></script>
-    <script src="/js/base.js"></script>
+    <link rel="stylesheet" href="/css/layouts/access/access.css" data-th-href="@{/css/layouts/access/access.css}"/>
+    <link rel="stylesheet" href="/css/external/aos.css" data-th-href="@{/css/external/aos.css}"/>
+    <script src="/js/external/aos.js" data-th-src="@{/js/external/aos.js}"></script>
+    <script src="/js/external/umbrella.js" data-th-src="@{/js/external/umbrella.js}"></script>
+    <script src="/js/base.js" data-th-src="@{/js/base.js}"></script>
 </head>
 <body>
-<form th:replace="this :: content"></form>
-<footer th:replace="components/footer/footer :: footer"></footer>
-<script src="/js/common.js"></script>
+<form data-th-replace="this :: content"></form>
+<footer data-th-replace="components/footer/footer :: footer"></footer>
+<script src="/js/common.js" data-th-src="@{/js/common.js}"></script>
 </body>
 </html>

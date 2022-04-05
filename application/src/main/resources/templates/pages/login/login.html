@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      th:include="layouts/access :: access(title='Affiliora | Login')"
->
+<html data-th-include="layouts/access :: access(title='Affiliora | Login')">
 <body>
-<form th:fragment="content" action="/dashboard" class="content w-screen h-screen" method="get" onsubmit="beforeSubmit('#login-button')">
+<form data-th-fragment="content" action="/dashboard" class="content w-screen h-screen" method="get"
+      onsubmit="beforeSubmit('#login-button')">
     <div data-aos="fade-zoom-in"
          data-aos-easing="ease-in-back"
          data-aos-duration="150"

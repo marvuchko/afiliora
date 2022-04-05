@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>Affiliora | Error</title>
-    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/base.css" data-th-href="@{/css/base.css}">
 </head>
 <body>
 <div class="h-screen justify-center bg-dark">
@@ -14,15 +14,15 @@
         <div class="tracking-widest flex flex-col items-center mt-8 max-w-md">
             <hr class="w-full mb-8 border-disabled shadow">
             <span class="text-gray-500 text-7xl block mb-8"><span>Error [[${errorCode}]]</span></span>
-            <span th:if="${errorCode == 404}" class="text-gray-500 text-xl">Sorry, page not found!</span>
-            <span th:if="${errorCode != 404}" class="text-gray-500 text-xl">Sorry, Something went wrong!</span>
+            <span data-th-if="${errorCode == 404}" class="text-gray-500 text-xl">Sorry, page not found!</span>
+            <span data-th-if="${errorCode != 404}" class="text-gray-500 text-xl">Sorry, something went wrong!</span>
             <hr class="w-full my-8 border-disabled shadow">
         </div>
         <a href="/dashboard" class="text-xl p-3 text-gray-500">
             <i class="fa fa-arrow-left mr-2"></i>
             Back to dashboard
         </a>
-        <footer th:replace="components/footer/footer :: footer"></footer>
+        <footer data-th-replace="components/footer/footer :: footer"></footer>
     </div>
 </div>
 </body>

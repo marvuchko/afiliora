@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      th:fragment="base"
->
+<html data-th-fragment="base">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>[[${title}]]</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/pages/profile.css">
-    <link rel="stylesheet" href="/css/external/aos.css" />
-    <script src="/js/external/aos.js"></script>
-    <script src="/js/external/chart.js"></script>
-    <script src="/js/external/umbrella.js"></script>
-    <script src="/js/external/sweetalert2.js" async></script>
-    <script src="/js/base.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" data-th-href="@{/images/favicon.ico}">
+    <link rel="stylesheet" href="/css/common.css" data-th-href="@{/css/common.css}">
+    <link rel="stylesheet" href="/css/pages/profile.css" data-th-href="@{/css/pages/profile.css}">
+    <link rel="stylesheet" href="/css/external/aos.css" data-th-href="@{/css/external/aos.css}"/>
+    <script src="/js/external/aos.js" data-th-src="@{/js/external/aos.js}"></script>
+    <script src="/js/external/chart.js" data-th-src="@{/js/external/chart.js}"></script>
+    <script src="/js/external/umbrella.js" data-th-src="@{/js/external/umbrella.js}"></script>
+    <script src="/js/external/sweetalert2.js" data-th-src="@{/js/external/sweetalert2.js}" async></script>
+    <script src="/js/base.js" data-th-src="@{/js/base.js}"></script>
 </head>
 <body>
 <header data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-duration="150"
         data-aos-offset="0"
-        th:replace="components/navbar/navbar :: navbar"></header>
+        data-th-replace="components/navbar/navbar :: navbar"></header>
 <section class="page-content">
     <section class="search-and-user">
         <form class="relative">
@@ -42,9 +40,9 @@
             </div>
         </div>
     </section>
-    <section class="page-grid" th:replace="this :: content"></section>
+    <section class="page-grid" data-th-replace="this :: content"></section>
     <footer class="page-footer"></footer>
 </section>
-<script src="/js/common.js"></script>
+<script src="/js/common.js" data-th-src="@{/js/common.js}"></script>
 </body>
 </html>

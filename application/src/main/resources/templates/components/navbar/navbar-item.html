@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <body>
-<li th:fragment="navbar-item" th:class="${isHeading ? 'menu-heading' : ''}">
-    <h3 th:if="${isHeading == true}">[[${text}]]</h3>
-    <a th:href="${href}" th:if="${isHeading == false}">
-        <i th:if="${icon != null}" th:class="${icon != null ? 'w-10 text-center fa fa-' + icon : 'w-10 text-center'}"></i>
+<li data-th-fragment="navbar-item" data-th-class="${isHeading ? 'menu-heading' : ''}">
+    <h3 data-th-if="${isHeading == true}">[[${text}]]</h3>
+    <a data-th-href="${href}" data-th-if="${isHeading == false}">
+        <i data-th-if="${icon != null}"
+           data-th-class="${icon != null ? 'w-10 text-center fa fa-' + icon : 'w-10 text-center'}"></i>
         <span>[[${text}]]</span>
     </a>
 </li>

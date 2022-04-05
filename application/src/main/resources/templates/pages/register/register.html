@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      th:include="layouts/access :: access(title='Affiliora | Register')"
->
+<html data-th-include="layouts/access :: access(title='Affiliora | Register')">
 <body>
-<form th:fragment="content" action="/dashboard" class="content w-screen h-screen" method="get" onsubmit="beforeSubmit('#register-button')">
+<form data-th-fragment="content" action="/dashboard" class="content w-screen h-screen" method="get"
+      onsubmit="beforeSubmit('#register-button')">
     <div data-aos="fade-zoom-in"
          data-aos-easing="ease-in-back"
          data-aos-duration="150"
@@ -50,7 +49,8 @@
                        placeholder="Doe" type="text">
             </div>
         </div>
-        <p class="text-red text-xs italic mb-4"><sup class="mr-1">Tip:</sup>Our employee will never ask for your password.</p>
+        <p class="text-red text-xs italic mb-4"><sup class="mr-1">Tip:</sup>Our employee will never ask for your
+            password.</p>
         <hr class="mb-4">
         <div class="flex items-center justify-between mb-4">
             <button class="font-bold py-2 px-4 rounded bg-link text-secondary w-36"

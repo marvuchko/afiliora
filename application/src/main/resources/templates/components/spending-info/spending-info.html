@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <body>
-<article th:fragment="spending-info" class="p-6 w-full h-full flex flex-col">
+<article data-th-fragment="spending-info" class="p-6 w-full h-full flex flex-col">
     <h6 class="uppercase text-blueGray-400 mb-3 text-xs font-semibold">
         Spending:
     </h6>
     <hr class="w-full">
     <div class="w-full h-full p-3 flex flex-wrap items-center justify-evenly">
-        <div th:replace="components/spending-info/spending-info-card :: spending-info-card(cardTitle='Budget', icon='money')"></div>
+        <div data-th-replace="components/spending-info/spending-info-card :: spending-info-card(cardTitle='Budget', icon='money')"></div>
         <div class="h-full border border-2"></div>
-        <div th:replace="components/spending-info/spending-info-card :: spending-info-card(cardTitle='Bonus', icon='credit-card-alt')"></div>
+        <div data-th-replace="components/spending-info/spending-info-card :: spending-info-card(cardTitle='Bonus', icon='credit-card-alt')"></div>
         <div class="h-full border border-2"></div>
-        <div th:replace="components/spending-info/spending-info-card :: spending-info-card(cardTitle='Commission', icon='credit-card')"></div>
+        <div data-th-replace="components/spending-info/spending-info-card :: spending-info-card(cardTitle='Commission', icon='credit-card')"></div>
         <div class="h-full border border-2"></div>
-        <div th:replace="components/spending-info/spending-info-card :: spending-info-card(cardTitle='Balance', icon='usd')"></div>
+        <div data-th-replace="components/spending-info/spending-info-card :: spending-info-card(cardTitle='Balance', icon='usd')"></div>
     </div>
 </article>
 </body>

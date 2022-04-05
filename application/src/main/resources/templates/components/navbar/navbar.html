@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <body>
-    <header class="page-header" th:fragment="navbar">
-        <nav>
-            <a aria-label="forecastr logo" class="logo" href="/access/login">
-                <img id="logo-image" class="mx-auto" src="/images/logo/affiliora-light.png">
-            </a>
-            <button aria-expanded="false" aria-label="open menu" class="toggle-mob-menu">
-                <svg aria-hidden="true" height="20" width="20">
-                    <use xlink:href="#down"></use>
-                </svg>
-            </button>
-            <ul class="admin-menu">
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Explore')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Marketplace', icon='shopping-cart')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Trends', icon='compass')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Affiliate')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Dashboard', icon='area-chart', href='/dashboard')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='My Affiliates', icon='male')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='My Links', icon='link')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Discussion', icon='comment-o')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Account')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Profile', icon='user', href='/profile')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Notifications', icon='bell', href='/profile')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Settings', icon='cogs', href='/settings')"></li>
-                <li th:replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Logout', icon='sign-out', href='/access/login')"></li>
-                <li></li>
-            </ul>
-        </nav>
-    </header>
+<header class="page-header" data-th-fragment="navbar">
+    <nav>
+        <a aria-label="forecast logo" class="logo" href="/access/login">
+            <img id="logo-image" class="mx-auto" src="/images/logo/affiliora-light.png">
+        </a>
+        <button aria-expanded="false" aria-label="open menu" class="toggle-mob-menu">
+            <svg aria-hidden="true" height="20" width="20">
+                <use xlink:href="#down"></use>
+            </svg>
+        </button>
+        <ul class="admin-menu">
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Explore')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Marketplace', icon='shopping-cart')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Trends', icon='compass')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Affiliate')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Dashboard', icon='area-chart', href='/dashboard')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='My Affiliates', icon='male')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='My Links', icon='link')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Discussion', icon='comment-o')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=true, text='Account')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Profile', icon='user', href='/profile')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Notifications', icon='bell', href='/profile')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Settings', icon='cogs', href='/settings')"></li>
+            <li data-th-replace="components/navbar/navbar-item :: navbar-item(isHeading=false, text='Logout', icon='sign-out', href='/access/login')"></li>
+            <li></li>
+        </ul>
+    </nav>
+</header>
 </body>
 </html>
