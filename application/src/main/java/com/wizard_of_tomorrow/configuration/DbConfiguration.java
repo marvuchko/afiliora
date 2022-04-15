@@ -12,7 +12,6 @@ import org.springframework.lang.NonNull;
 
 @Configuration(DbConfiguration.BEAN_NAME)
 @EnableJpaAuditing(auditorAwareRef = DbConfiguration.BEAN_NAME)
-@ConfigurationProperties(prefix = "spring.datasource")
 @EnableJpaRepositories(basePackageClasses = RepositoryPackage.class)
 public class DbConfiguration implements AuditorAware<UUID> {
 
