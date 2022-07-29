@@ -32,7 +32,7 @@
 
 body {
   font: 16px/1.5 "Poppins", sans-serif;
-  background: var(--page-content-bgColor);
+  background: var(--page-header-bgColor);
   overflow-y: scroll;
   overflow-x: hidden;
 }

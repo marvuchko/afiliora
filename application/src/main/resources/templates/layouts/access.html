@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>[[${title}]]</title>
-    <link rel="stylesheet" data-th-href="@{/css/layouts/access/access.css}"/>
-    <script data-th-src="@{/js/external/umbrella.js}"></script>
-    <script data-th-src="@{/js/base.js}"></script>
+    <link rel="stylesheet" data-th-href="@{/css/common.css}">
 </head>
-<body class="blur-sm">
+<body>
 <form data-th-replace="this :: content"></form>
 <footer data-th-replace="components/footer/footer :: footer"></footer>
+<script data-th-src="@{/js/routing.js}"></script>
+<script data-th-src="@{/js/external/umbrella.js}"></script>
 <script data-th-src="@{/js/common.js}"></script>
 </body>
 </html>

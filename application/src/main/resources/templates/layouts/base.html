@@ -7,13 +7,8 @@
     <title>[[${title}]]</title>
     <link rel="icon" type="image/x-icon" data-th-href="@{/images/favicon.ico}">
     <link rel="stylesheet" data-th-href="@{/css/common.css}">
-    <link rel="stylesheet" data-th-href="@{/css/pages/profile.css}">
-    <script data-th-src="@{/js/external/chart.js}"></script>
-    <script data-th-src="@{/js/external/umbrella.js}"></script>
-    <script data-th-src="@{/js/external/sweetalert2.js}" async></script>
-    <script data-th-src="@{/js/base.js}"></script>
 </head>
-<body class="blur-sm">
+<body>
 <header data-th-replace="components/navbar/navbar :: navbar"></header>
 <section class="page-content">
     <section class="search-and-user">
@@ -37,6 +32,15 @@
     <section class="page-grid" data-th-replace="this :: content"></section>
     <footer class="page-footer"></footer>
 </section>
+<script data-th-src="@{/js/routing.js}"></script>
+<script data-th-src="@{/js/external/chart.js}"></script>
+<script data-th-src="@{/js/external/umbrella.js}"></script>
+<script data-th-src="@{/js/external/sweetalert2.js}"></script>
 <script data-th-src="@{/js/common.js}"></script>
+
+<script src="/js/dashboard/total-leads-bar-chart.js"></script>
+<script src="/js/dashboard/total-sales-bar-chart.js"></script>
+<script src="/js/dashboard/affiliate-pie-chart.js"></script>
+<script src="/js/dashboard/clicks-polar-chart.js"></script>
 </body>
 </html>
