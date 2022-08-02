@@ -1,51 +1,59 @@
-const loadPage = (url) => {
-  return fetch(url).then((response) => {
-    return response.text();
-  });
-}
+(function() {
 
-const changePage = () => {
-  var htmlElement = document.body.parentElement;
-  var url = window.location.href;
+    const loadPage = (url, method = 'GET', body = {}) => {
+        const options = method === 'GET' ? { method } : { method, body: JSON.stringify(body) }
+        return fetch(url, { method, options }).then((response) => response.text());
+    }
 
-  loadPage(url).then((responseText) => {
-    var wrapper = document.createElement('html');
-    wrapper.innerHTML = responseText;
+    const changePage = () => {
+        const htmlElement = document.body.parentElement;
+        const url = window.location.href;
 
-    document.title = wrapper.children[0].querySelector('title').innerHTML;
-    htmlElement.children[1].innerHTML = wrapper.children[1].innerHTML;
+        loadPage(url).then((responseText) => {
+            const wrapper = document.createElement('html');
+            wrapper.innerHTML = responseText;
 
-    window.top.location = window.top.location;
-  });
-}
+            document.title = wrapper.children[0].querySelector('title').innerHTML;
+            htmlElement.children[1].innerHTML = wrapper.children[1].innerHTML;
 
-window.addEventListener('popstate', changePage);
+            window.scrollTo(0, 0);
 
-document.addEventListener('click', (event) => {
-  var element = event.target;
+            reloadScripts();
+        });
+    }
 
-  while (element && !element.href) {
-    element = element.parentNode;
-  }
+    const reloadScripts = () => {
+        const scripts = document.querySelectorAll('script');
+        if (scripts) {
+            scripts.forEach(scriptTag => {
+                if (scriptTag.src.indexOf('routing.js') > 0) {
+                    return;
+                }
+                document.body.removeChild(scriptTag);
+                const newScriptTag = document.createElement("script");
+                newScriptTag.src = scriptTag.src;
+                newScriptTag.async = scriptTag.async;
+                document.body.appendChild(newScriptTag);
+            });
+        }
+    }
 
-  if (element) {
-    event.preventDefault();
-    history.pushState(null, null, element.href);
-    changePage();
-  }
+    window.addEventListener('popstate', changePage);
 
-});
+    document.addEventListener('click', (event) => {
+        let element = event.target;
 
-const reloadScripts = () => {
-  var scripts = document.querySelectorAll('script');
-  if (scripts) {
-    scripts.forEach(scriptTag => {
-      console.log(scriptTag);
+        while (element && !element.href) {
+            element = element.parentNode;
+        }
 
-      document.body.removeChild(scriptTag);
-      const newScriptTag = document.createElement("script");
-      newScriptTag.src = scriptTag.src;
-      document.body.appendChild(newScriptTag);
+        if (element && element.href) {
+            event.preventDefault();
+            const link = element.href.split('#')[0];
+            history.pushState(null, null, link);
+            changePage();
+        }
+
     });
-  }
-}
+
+})();

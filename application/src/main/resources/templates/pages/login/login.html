@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html data-th-include="layouts/access :: access(title='Affiliora | Login')">
 <body>
-<form data-th-fragment="content" data-th-action="@{/dashboard}" class="content w-screen h-screen" method="get"
-      onsubmit="beforeSubmit('#login-button')">
+<form data-th-fragment="content" data-th-action="@{/dashboard}" class="content w-screen h-screen" method="get">
     <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
         <div class="mb-4">
             <img id="logo-image" class="mx-auto"
@@ -33,6 +32,7 @@
         <div class="flex items-center justify-between mb-4">
             <button class="w-28 font-bold py-2 px-4 rounded bg-link text-secondary shadow"
                     type="submit"
+                    onclick="beforeSubmit('#login-button')"
                     id="login-button">
                 <i class="fa fa-sign-in mr-2"></i>
                 Log in

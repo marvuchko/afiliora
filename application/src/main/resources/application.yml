@@ -29,9 +29,8 @@ spring:
     username: ${DB_USERNAME:affiliora}
     password: ${DB_PASSWORD:affiliora}
 
-    spring:
-      devtools:
-        add-properties: ${DEVTOOLS_ENABLED:false}
+  devtools:
+    add-properties: ${DEVTOOLS_ENABLED:true}
 
 affiliora:
   mvc:
