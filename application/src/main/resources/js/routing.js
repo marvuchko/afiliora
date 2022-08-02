@@ -23,12 +23,11 @@
     }
 
     const reloadScripts = () => {
-        const scripts = document.querySelectorAll('script');
+        const scripts = [...document.querySelectorAll('script')]
+            .filter(scriptTag => scriptTag.src.indexOf('routing.js') === -1);
+
         if (scripts) {
             scripts.forEach(scriptTag => {
-                if (scriptTag.src.indexOf('routing.js') > 0) {
-                    return;
-                }
                 document.body.removeChild(scriptTag);
                 const newScriptTag = document.createElement("script");
                 newScriptTag.src = scriptTag.src;
